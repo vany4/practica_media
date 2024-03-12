@@ -1,0 +1,42 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+.title{ font-size: 3rem;
+    background: none;
+    color: crimson;
+    border-bottom: none;
+    margin: 40px;
+    text-align: center;}
+
+/*cuando hay un máximo de 700px el color de fondo cambia a chocolate*/
+@media screen and (min-width: 700px){
+    body{
+        background-color: chocolate;
+    }
+}
+/*cuando hay un máximo de 700px el fondo es de #000 y el color #fff*/
+@media screen and (min-width: 400px), (max-width: 700px){
+    .title{
+        background: #000;
+        color: #fff;
+    }
+}
+/*cuando hay un máximo de 600px el texto se alinea a la izquiera y el fondo cambia a steelblue*/
+@media screen and (max-width: 600px){
+    .title {
+        text-align: left;
+        background: steelblue;
+    }
+}
+
+/*cuando se realiza una impresión el color cambia a steelblue, 
+el tamaño de letra a 5rem, se acomoda el texto a la derecha y la familia se coloca cursiva*/
+@media print{
+    .title{
+        color: steelblue;
+        font-size: 5rem;
+        text-align: right;
+        font-family: cursive;
+    }
+}
